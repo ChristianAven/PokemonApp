@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { StyleSheet, TextInput, View, StyleProp, ViewStyle } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
-import { useState } from 'react';
+import useDebounceValue from '../hooks/useDebounceValue';
+
 
 
 interface Props {
     style?: StyleProp<ViewStyle>;
+    onDebounce: (value: string) => void;
 }
 
-const SearchInput = ({style}: Props) => {
+const SearchInput = ({style, onDebounce}: Props) => {
 
     const [textValue, setTextValue] = useState('')
+    const debounceValue = useDebounceValue( textValue );
+
+
+    useEffect(() => {
+        onDebounce(debounceValue);
+    }, [debounceValue])
 
 
     return (
