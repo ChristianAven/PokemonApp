@@ -28,7 +28,7 @@ const SearchScreen = () => {
     if (isFetching) {
         return ( <Loading/> )
     }
-
+    
     return (
         <View style={{
             flex: 1,

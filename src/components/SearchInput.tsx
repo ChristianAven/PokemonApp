@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, TextInput, View, StyleProp, ViewStyle } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
+import { useState } from 'react';
 
 
 interface Props {
@@ -10,6 +11,10 @@ interface Props {
 }
 
 const SearchInput = ({style}: Props) => {
+
+    const [textValue, setTextValue] = useState('')
+
+
     return (
         <View style={{
             ...styles.container,
@@ -21,6 +26,8 @@ const SearchInput = ({style}: Props) => {
                     style={styles.textInput}
                     autoCapitalize='none'
                     autoCorrect={false}
+                    value={textValue}
+                    onChangeText={setTextValue}
                 />
                 <Icon
                     name='search-outline'
