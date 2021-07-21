@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { PokemonFull } from '../interfaces/pokemonInterfaces';
 import { FadeInImage } from './FadeInImage';
 

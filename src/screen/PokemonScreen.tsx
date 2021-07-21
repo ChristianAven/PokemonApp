@@ -6,7 +6,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import Icon from "react-native-vector-icons/Ionicons";
 
-import { RootStackParams } from "../navigation/StackNavigator";
+import { RootStackParams } from "../navigation/StackNavigatorHome";
 
 import { FadeInImage } from "../components/FadeInImage";
 import usePokemon from '../hooks/usePokemon';
